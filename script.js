@@ -1,3 +1,4 @@
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -98,13 +99,13 @@ if (contactForm) {
         const message = contactForm.querySelector('textarea').value;
         
         // WhatsApp message
-        const whatsappMessage = `ନମସ୍କାର! 
+        const whatsappMessage = `Hello! 
         
-ନାମ: ${name}
-ମୋବାଇଲ୍: ${phone}
-${email ? `ଇମେଲ୍: ${email}` : ''}
-ଶ୍ରେଣୀ: ${classSelected}
-${message ? `ମେସେଜ୍: ${message}` : ''}`;
+Name: ${name}
+Mobile: ${phone}
+${email ? `Email: ${email}` : ''}
+Class: ${classSelected}
+${message ? `Message: ${message}` : ''}`;
         
         // Encode message for WhatsApp
         const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -117,7 +118,7 @@ ${message ? `ମେସେଜ୍: ${message}` : ''}`;
         contactForm.reset();
         
         // Show success message (optional)
-        alert('ଆପଣଙ୍କ ମେସେଜ୍ ପଠାଯାଇଛି! ଆମେ ଶୀଘ୍ର ଯୋଗାଯୋଗ କରିବୁ।');
+        alert('Your message has been sent! We will contact you soon.');
     });
 }
 
@@ -179,7 +180,6 @@ if ('IntersectionObserver' in window) {
 document.querySelectorAll('a[href^="tel:"]').forEach(tel => {
     tel.addEventListener('click', (e) => {
         // Analytics or tracking can be added here
-        // console.log('Phone call initiated:', tel.href);
     });
 });
 
@@ -299,10 +299,6 @@ if (videosGrid) {
     });
     updateScrollButtons(videosGrid, scrollLeftVideoBtn, scrollRightVideoBtn);
 }
-
-// console.log('🎓 Ambition Residential School website loaded successfully!');
-// console.log('✅ YouTube videos are now embedded and playable!');
-
 
 const stickyButtons = document.getElementById('stickyButtons');
 const heroSection = document.querySelector('.hero');
